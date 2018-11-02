@@ -1,0 +1,33 @@
+<?php
+
+$enable = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_enable_catalog_category());
+$button_type = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_button_type());
+$custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_custom_css());
+
+$price = 0;
+?>
+
+<?php if ($enable) : ?>
+
+    <div class="cc-price-module-catalog_category" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
+    <style>
+        <?=$custom_css;?>
+    </style>
+    <script type="text/javascript">
+        require(["jquery","domReady!"], function ($) {
+
+            $('.products.list.items.product-items').children('li').each(function( index ) {
+                let price_module = $(this).find('.cc-price-module-catalog_category');
+                if ($(price_module[0]).hasClass('cc-loc-changed') === false) {
+                    let target = $(this).find('.price-box.price-final_price');
+                    let price = $(this).find('[data-price-amount]').data('price-amount') * 100;
+                    $(price_module[0]).attr('data-cc', price);
+                    $(price_module[0]).appendTo(target);
+                    $(price_module[0]).addClass('cc-loc-changed');
+                }
+            });
+            loadCreditClick();
+        });
+    </script>
+
+<?php endif; ?>

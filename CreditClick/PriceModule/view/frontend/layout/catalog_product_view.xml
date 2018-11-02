@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+<head>
+    <script src="https://ecom.creditclick.eu/cc_nl.min.js?via=catalog_product_view" src_type="url"/>
+</head>
+<body>
+    <referenceContainer name="product.info.main">
+        <block
+                name="creditclick.pricemodule.catalog.product"
+                class="Magento\Framework\View\Element\Template"
+                template="CreditClick_PriceModule::product/view/catalog_product.phtml"
+                before="alert.urls"
+        >
+        </block>
+    </referenceContainer>
+</body>
+</page>
+

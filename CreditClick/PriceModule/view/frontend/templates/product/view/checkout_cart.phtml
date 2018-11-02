@@ -1,0 +1,24 @@
+<?php
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$enable = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_enable_checkout_cart());
+$button_type = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_button_type());
+$custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_custom_css());
+$cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+$price = $cart->getQuote()->getGrandTotal() * 100;
+
+?>
+
+<?php if ($enable) : ?>
+
+<div class="cc-price-module-checkout_cart" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
+<script type="text/javascript">
+    require(["jquery","domReady!"], function () {
+        loadCreditClick();
+    });
+</script>
+<style>
+    <?=$custom_css;?>
+</style>
+
+<?php endif; ?>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+<head>
+    <script src="https://ecom.creditclick.eu/cc_nl.min.js?via=catalogsearch_result_index" src_type="url"/>
+</head>
+<body>
+    <referenceBlock name="catalogsearch.product.addto">
+        <block
+                name="creditclick.pricemodule.catalogsearch.result"
+                template="CreditClick_PriceModule::product/view/catalogsearch_result.phtml"
+                class="Magento\Framework\View\Element\Template"
+        >
+        </block>
+    </referenceBlock>
+</body>
+</page>
+

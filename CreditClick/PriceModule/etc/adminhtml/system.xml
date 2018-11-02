@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+       <system>
+           <tab id="CreditClick_PriceModule_tab" translate="label" sortOrder="10">
+               <label>Creditclick</label>
+           </tab>
+           <section id="creditclick_pricemodule" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+               <class>separator-top</class>
+               <label>Website Information Module settings</label>
+               <tab>CreditClick_PriceModule_tab</tab>
+               <resource>CreditClick_PriceModule::settings</resource>
+               <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                   <label>Creditclick Website Information Module settings</label>
+                   <field id="enable_catalog_category" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Enable on Catalog Category overview</label>
+                       <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   </field>
+                   <field id="enable_catalog_product" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Enable on Catalog Product detail</label>
+                       <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   </field>
+
+                   <field id="enable_catalogsearch_result" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Enable on Catalogsearch result</label>
+                       <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   </field>
+
+                   <field id="enable_checkout_cart" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Enable on Checkout Cart</label>
+                       <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   </field>
+
+                   <field id="button_type" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Button type</label>
+                       <comment>Choose type of button (example: 0, 1 or 2)</comment>
+                   </field>
+                   <field id="custom_css" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Custom Css</label>
+                       <comment>Add custom styles (CSS). use classname .cc-wrapper</comment>
+                   </field>
+               </group>
+           </section>
+       </system>
+</config>

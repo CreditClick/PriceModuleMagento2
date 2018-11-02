@@ -1,0 +1,38 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\CatalogSearch\Block\ */
+
+$enable = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_enable_catalogsearch_result());
+$button_type = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_button_type());
+$custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_custom_css());
+
+$price = 0;
+
+?>
+
+<?php if ($enable) : ?>
+
+<div class="cc-price-module-catalogsearch_result" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
+<style>
+    <?=$custom_css;?>
+</style>
+<script type="text/javascript">
+    require(["jquery","domReady!"], function ($) {
+
+        $('.products.list.items.product-items').children('li').each(function( index ) {
+            let price_module = $(this).find('.cc-price-module-catalogsearch_result');
+            if ($(price_module[0]).hasClass('cc-loc-changed') === false) {
+                let target = $(this).find('[data-price-box]');
+                let price = $(this).find('[data-price-amount]').data('price-amount') * 100;
+                $(price_module[0]).attr('data-cc', price);
+                $(price_module[0]).appendTo(target);
+                $(price_module[0]).addClass('cc-loc-changed');
+            }
+        });
+        loadCreditClick();
+    });
+</script>
+
+<?php endif; ?>
