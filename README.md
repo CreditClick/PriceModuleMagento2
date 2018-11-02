@@ -22,16 +22,16 @@ displayed that fits the consumer's spending limit.
 Please note that the CreditClick Price Module is only displayed on the product page when the
 product offered costs at least € 250 and up to € 1,000. 
 
-Download the special Magento 2 module [here](https://github.com/CreditClick/PriceModuleWooCommerce/releases)
+Download the special Magento 2 module [here](https://github.com/CreditClick/PriceModuleMagento2/releases)
 
 ## License
 
-Our module is available under the BSD-2-Clause. See the [LICENSE](https://github.com/CreditClick/PriceModuleWooCommerce/blob/master/LICENSE) file for more information.
+Our module is available under the BSD-2-Clause. See the [LICENSE](https://github.com/CreditClick/PriceModuleMagento2/blob/master/LICENSE) file for more information.
 
 ## Installation
 
-A more detailed installation and configuration instruction is available [here](https://github.com/CreditClick/PriceModuleWooCommerce/wiki).
+A more detailed installation and configuration instruction is available [here](https://github.com/CreditClick/PriceModuleMagento2/wiki).
 
 ## Issues
 
-Please contact [support@creditclick.nl](mailto:support@creditclick.nl) or file your issue [here](https://github.com/CreditClick/PriceModuleWooCommerce/issues)
+Please contact [support@creditclick.nl](mailto:support@creditclick.nl) or file your issue [here](https://github.com/CreditClick/PriceModuleMagento2/issues)
