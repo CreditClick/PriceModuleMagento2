@@ -6,7 +6,7 @@
            </tab>
            <section id="creditclick_pricemodule" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                <class>separator-top</class>
-               <label>Website Price Module settings</label>
+               <label>Price Module settings</label>
                <tab>CreditClick_PriceModule_tab</tab>
                <resource>CreditClick_PriceModule::settings</resource>
                <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
