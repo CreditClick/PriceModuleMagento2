@@ -13,5 +13,8 @@
             >
             </block>
         </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="cart.ajax.qty.update" template="CreditClick_PriceModule::product/view/js.phtml" after="-"/>
+        </referenceContainer>
     </body>
 </page>
