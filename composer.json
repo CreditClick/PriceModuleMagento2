@@ -4,7 +4,7 @@
   
   "type": "magento2-module",
   "version": "1.0.0",
-  "homepage": "https://www.creditclick.eu/developers/"
+  "homepage": "https://www.creditclick.eu/developers/",
   "license": [
     "BSD-2-Clause"
   ],
@@ -22,7 +22,7 @@
   },
   "require": {
     "php": "~5.5.0|~5.6.0|~7.0.0",
-    "magento/framework": "*",
+    "magento/framework": "*"
   },
   "autoload": {
     "files": [
