@@ -14,7 +14,7 @@ $price = 0;
         <?=$custom_css;?>
     </style>
     <script type="text/javascript">
-        require(["jquery","domReady!PriceModuleMagento2/view/frontend/templates/product/view/catalog_category"], function ($) {
+        require(["jquery","domReady!"], function ($) {
 
             $('.products.list.items.product-items').children('li').each(function( index ) {
                 let price_module = $(this).find('.cc-price-module-catalog_category');
