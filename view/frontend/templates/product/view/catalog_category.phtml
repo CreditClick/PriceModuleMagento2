@@ -14,16 +14,26 @@ $price = 0;
         <?=$custom_css;?>
     </style>
     <script type="text/javascript">
+        String.prototype.replaceAll = function(target, replacement) {
+            return this.split(target).join(replacement);
+        };
         require(["jquery","domReady!"], function ($) {
 
             $('.products.list.items.product-items').children('li').each(function( index ) {
                 let price_module = $(this).find('.cc-price-module-catalog_category');
+                let price_box = $(this).find('.price-wrapper');
+
                 if ($(price_module[0]).hasClass('cc-loc-changed') === false) {
                     let target = $(this).find('.price-box.price-final_price');
                     let price = $(this).find('[data-price-amount]').data('price-amount') * 100;
                     $(price_module[0]).attr('data-cc', price);
                     $(price_module[0]).appendTo(target);
                     $(price_module[0]).addClass('cc-loc-changed');
+                    $(price_box).on('DOMSubtreeModified', function() {
+                        let price2 = ($('.price', price_box).html() + "").replaceAll('€', '').replaceAll(' ', '').replaceAll('&nbsp;', '').replaceAll('.', '').replaceAll(',', '');
+                        $(price_module[0]).attr('data-cc', price2);
+                        loadCreditClick();
+                    });
                 }
             });
             loadCreditClick();

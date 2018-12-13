@@ -15,7 +15,19 @@ $custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\
 <div class="cc-price-module-catalog_product" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
 <script type="text/javascript">
     require(["jquery","domReady!"], function ($) {
+        String.prototype.replaceAll = function(target, replacement) {
+            return this.split(target).join(replacement);
+        };
         loadCreditClick();
+        $(document).ready(function () {
+            let price_box = $(this).find('.price-wrapper');
+            debugger;
+            $(price_box).on('DOMSubtreeModified', function () {
+                let price2 = ($('.price', price_box).html() + "").replaceAll('€', '').replaceAll(' ', '').replaceAll('&nbsp;', '').replaceAll('.', '').replaceAll(',', '');
+                $('.cc-price-module-catalog_product').attr('data-cc', price2);
+                loadCreditClick();
+            });
+        });
     });
 </script>
 <style>
