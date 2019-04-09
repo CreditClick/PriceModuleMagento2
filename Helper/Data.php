@@ -9,7 +9,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 	const CREDITCLICK_PRICEMODULE_ENABLE_CATALOG_PRODUCT      = 'creditclick_pricemodule/general/enable_catalog_product';
 	const CREDITCLICK_PRICEMODULE_ENABLE_CATALOGSEARCH_RESULT = 'creditclick_pricemodule/general/enable_catalogsearch_result';
 	const CREDITCLICK_PRICEMODULE_ENABLE_CHECKOUT_CART        = 'creditclick_pricemodule/general/enable_checkout_cart';
-	const CREDITCLICK_PRICEMODULE_BUTTON_TYPE                 = 'creditclick_pricemodule/general/button_type';
+	const CREDITCLICK_PRICEMODULE_COUNTRY                     = 'creditclick_pricemodule/general/country';
 	const CREDITCLICK_PRICEMODULE_CUSTOM_CSS                  = 'creditclick_pricemodule/general/custom_css';
 
 	/**
@@ -54,10 +54,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 		);
 	}
 
-	public function get_button_type()
+	public function get_country()
 	{
 		return $this->scopeConfig->getValue(
-			self::CREDITCLICK_PRICEMODULE_BUTTON_TYPE,
+			self::CREDITCLICK_PRICEMODULE_COUNTRY,
 			\Magento\Store\Model\ScopeInterface::SCOPE_STORE
 		);
 	}

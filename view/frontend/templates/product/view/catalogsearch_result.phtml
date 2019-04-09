@@ -5,7 +5,7 @@
 /** @var $block \Magento\CatalogSearch\Block\ */
 
 $enable = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_enable_catalogsearch_result());
-$button_type = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_button_type());
+$country = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_country());
 $custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_custom_css());
 
 $price = 0;
@@ -14,7 +14,7 @@ $price = 0;
 
 <?php if ($enable) : ?>
 
-<div class="cc-price-module-catalogsearch_result" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
+<div class="cc-price-module-catalogsearch_result" data-cc="<?=$price;?>" data-cc-country="<?=$country?>"></div>
 <style>
     <?=$custom_css;?>
 </style>

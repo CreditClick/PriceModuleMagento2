@@ -4,7 +4,7 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');
 $price = $product->getPriceInfo()->getPrice('final_price')->getAmount()->getValue()*100;
 $enable = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_enable_catalog_product());
-$button_type = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_button_type());
+$country = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_country());
 $custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\Data')->get_custom_css());
 
 ?>
@@ -12,7 +12,7 @@ $custom_css = $block->escapeHtml($this->helper('\CreditClick\PriceModule\Helper\
 
 <?php if ($enable) : ?>
 
-<div class="cc-price-module-catalog_product" data-cc="<?=$price;?>" data-cc-btn="<?=$button_type?>"></div>
+<div class="cc-price-module-catalog_product" data-cc="<?=$price;?>" data-cc-country="<?=$country?>"></div>
 <script type="text/javascript">
     require(["jquery","domReady!"], function ($) {
         String.prototype.replaceAll = function(target, replacement) {
