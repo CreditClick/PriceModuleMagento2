@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
        <system>
            <tab id="CreditClick_PriceModule_tab" translate="label" sortOrder="10">
-               <label>Creditclick</label>
+               <label>CreditClick</label>
            </tab>
            <section id="creditclick_pricemodule" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                <class>separator-top</class>
@@ -10,7 +10,7 @@
                <tab>CreditClick_PriceModule_tab</tab>
                <resource>CreditClick_PriceModule::settings</resource>
                <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                   <label>Creditclick Price Module settings</label>
+                   <label>CreditClick Price Module settings</label>
                    <field id="enable_catalog_category" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                        <label>Enable on Catalog Category overview</label>
                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
@@ -30,9 +30,10 @@
                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                    </field>
 
-                   <field id="button_type" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                       <label>Button type</label>
-                       <comment>Choose type of button (example: 0, 1 or 2)</comment>
+                   <field id="country" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <label>Country</label>
+                        <source_model>CreditClick\PriceModule\Model\Config\Source\Country</source_model>                      
+                        <comment>Choose country in which you offer the loan</comment>
                    </field>
                    <field id="custom_css" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                        <label>Custom Css</label>
