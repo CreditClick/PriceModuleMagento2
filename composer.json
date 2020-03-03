@@ -4,19 +4,19 @@
   
   "type": "magento2-module",
   "version": "2.0.0",
-  "homepage": "https://www.creditclick.eu/developers/",
+  "homepage": "https://www.creditclick.com/developers/",
   "license": [
     "BSD-2-Clause"
   ],
   "authors": [
     {
       "name": "CreditClick",
-      "email": "info@creditclick.nl",
-      "homepage": "https://www.creditclick.eu"
+      "email": "support@creditclick.com",
+      "homepage": "https://www.creditclick.com"
     }
   ],
   "support": {
-    "email": "support@creditclick.nl",
+    "email": "support@creditclick.com",
     "source": "https://github.com/CreditClick/PriceModuleMagento2",
     "issues": "https://github.com/CreditClick/PriceModuleMagento2/issues"
   },
