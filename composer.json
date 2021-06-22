@@ -3,7 +3,7 @@
   "description": "Extends Magento 2 with a CreditClick pricing information on products.",
   
   "type": "magento2-module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://www.creditclick.com/developers/",
   "license": [
     "BSD-2-Clause"
@@ -21,7 +21,7 @@
     "issues": "https://github.com/CreditClick/PriceModuleMagento2/issues"
   },
   "require": {
-    "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+    "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0|~7.2.0|~7.3.0"
   },
   "autoload": {
     "files": [
